@@ -1,7 +1,19 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react-swc'
+import tailwindcss from "@tailwindcss/vite";
+import react from "@vitejs/plugin-react-swc";
+import { dirname, resolve } from "path";
+import { fileURLToPath } from "url";
+import { defineConfig } from "vite";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
-})
+  plugins: [react(), tailwindcss()],
+  resolve: {
+    alias: {
+      // Use an absolute path so Vite reliably resolves "@/..." to src/
+      "@": resolve(__dirname, "src"),
+    },
+  },
+});
