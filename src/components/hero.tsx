@@ -1,14 +1,16 @@
 export function Hero() {
   return (
-    <section id="hero" className="hero" aria-labelledby="hero-title">
+    <section
+      id="hero"
+      className="relative w-full h-[650px] overflow-hidden bg-accent-primary"
+      aria-labelledby="hero-title"
+    >
       <h2 id="hero-title" className="sr-only">
         Nuevas colecciones y ofertas destacadas
       </h2>
-      <div className="hero-slider">
-        <div
-          className="hero-slide active"
-          data-bg="https://images.unsplash.com/photo-1549298499-d4190c13e54b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        >
+
+      <div className="absolute top-0 left-0">
+        <div className="hero-slide active">
           <div className="hero-content">
             <h1 className="hero-title">Nueva Colección Deportiva</h1>
             <p className="hero-subtitle">
@@ -25,10 +27,8 @@ export function Hero() {
             </div>
           </div>
         </div>
-        <div
-          className="hero-slide"
-          data-bg="https://images.unsplash.com/photo-1616765706932-9c3f0b2f5b6f?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        >
+
+        <div className="hero-slide">
           <div className="hero-content">
             <h1 className="hero-title">Máximo Rendimiento</h1>
             <p className="hero-subtitle">
@@ -50,10 +50,8 @@ export function Hero() {
             </div>
           </div>
         </div>
-        <div
-          className="hero-slide"
-          data-bg="https://images.unsplash.com/photo-1552699738-f9d2d7936166?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        >
+
+        <div className="hero-slide">
           <div className="hero-content">
             <h1 className="hero-title">Estilo Urbano y Atlético</h1>
             <p className="hero-subtitle">

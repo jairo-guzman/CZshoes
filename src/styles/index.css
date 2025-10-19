@@ -1,3 +1,114 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Rajdhani:wght@400;500;600;700&display=swap");
 
 @import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-sans);
+  --font-heading: var(--font-heading);
+
+  --color-background-primary: var(--background-primary);
+  --color-background-secondary: var(--background-secondary);
+
+  --color-foreground-primary: var(--foreground-primary);
+  --color-foreground-secondary: var(--foreground-secondary);
+
+  --color-accent-primary: var(--accent-primary);
+  --color-accent-secondary: var(--accent-secondary);
+
+  --color-border: var(--border);
+
+  --color-badge-new: var(--badge-new);
+  --color-badge-bestseller: var(--badge-bestseller);
+  --color-badge-sale: var(--badge-sale);
+  --color-badge-kids: var(--badge-kids);
+  --color-badge-top-sales: var(--badge-top-sales);
+  --color-badge-novelty: var(--badge-novelty);
+
+  --color-whatsapp: var(--whatsapp);
+  --color-whatsapp-dark: var(--whatsapp-dark);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  /* Colors (Grayscale Palette) */
+  --background-primary: #121212;
+  --background-secondary: #1e1e1e;
+
+  --foreground-primary: #ffffff;
+  --foreground-secondary: #a0a0a0;
+
+  --accent-primary: #bbbbbb;
+  --accent-secondary: #888888;
+
+  --border: #333333;
+
+  /* Specific colors for badges */
+  --badge-new: #bbbbbb;
+  --badge-bestseller: #bbbbbb;
+  --badge-sale: #dc3545;
+  --badge-kids: #bbbbbb;
+  --badge-top-sales: #bbbbbb;
+  --badge-novelty: #bbbbbb;
+  --whatsapp: #25d366;
+  --whatsapp-dark: #1da851;
+
+  /* Fonts */
+  --font-sans: "Inter", sans-serif;
+  --font-heading: "Rajdhani", sans-serif;
+
+  /* Spacing */
+  --radius: 0.625rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-background-primary text-foreground-primary font-sans antialiased leading-1.5;
+  }
+
+  a {
+    @apply text-accent-primary no-underline transition-colors duration-200;
+  }
+
+  a:hover {
+    @apply text-accent-secondary;
+  }
+
+  ul {
+    @apply list-none m-0 p-0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading text-foreground-secondary leading-1;
+  }
+
+  img {
+    @apply max-w-full h-auto block;
+  }
+}
+
+@layer utilities {
+  .sr-only {
+    @apply absolute w-px h-px -m-px overflow-hidden whitespace-nowrap border-0 p-0;
+  }
+
+  .container {
+    @apply max-w-7xl mx-auto px-4;
+  }
+}

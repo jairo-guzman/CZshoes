@@ -1,48 +1,24 @@
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { NavItem } from "@/components/nav-item";
+
 export function Header() {
   return (
-    <header className="header">
-      <nav className="navbar" aria-label="Navegación principal">
-        <div className="nav-container">
-          <a href="#" className="logo">
-            <img
-              src="media/logos/logo.png"
-              alt="CzShoes Logo"
-              className="logo-img"
-            />
-            <span className="logo-text">CzShoes</span>
+    <header className="bg-background-secondary sticky top-0 left-0 w-full z-50 shadow-md">
+      <nav className="p-4" aria-label="Navegación principal">
+        <div className="flex justify-between items-center max-w-7xl w-full mx-auto px-4">
+          <a href="/">
+            <img src="/logo.png" alt="CZShoes Logo" className="w-[115px]" />
           </a>
-          <ul className="nav-menu">
-            <li>
-              <a href="#hero" className="nav-link">
-                Inicio
-              </a>
-            </li>
-            <li>
-              <a href="#features" className="nav-link">
-                Ventajas
-              </a>
-            </li>
-            <li>
-              <a href="#products" className="nav-link">
-                Catálogo
-              </a>
-            </li>
-            <li>
-              <a href="#categories" className="nav-link">
-                Categorías
-              </a>
-            </li>
-            <li>
-              <a href="#about" className="nav-link">
-                Sobre Nosotros
-              </a>
-            </li>
-            <li>
-              <a href="#contact" className="nav-link">
-                Contacto
-              </a>
-            </li>
+
+          <ul className="gap-8 hidden sm:flex">
+            <NavItem href="#hero" label="Inicio" />
+            <NavItem href="#products" label="Catálogo" />
+            <NavItem href="#categories" label="Categorías" />
+            <NavItem href="#about" label="Sobre Nosotros" />
+            <NavItem href="#contact" label="Contacto" />
           </ul>
+
           <div className="nav-actions">
             <a
               href="https://wa.me/573136811023?text=Hola,%20me%20interesa%20saber%20más%20sobre%20sus%20productos."
@@ -51,13 +27,18 @@ export function Header() {
               aria-label="Contactar por WhatsApp"
               rel="noopener"
             >
-              <i className="fab fa-whatsapp"></i> WhatsApp
+              <FontAwesomeIcon icon={faWhatsapp} /> ¡Contáctanos!
             </a>
           </div>
-          <button className="hamburger" aria-label="Abrir menú móvil">
-            <span></span>
-            <span></span>
-            <span></span>
+
+          <button
+            type="button"
+            className="flex sm:hidden flex-col justify-between w-8 h-5 cursor-pointer"
+            aria-label="Abrir menú móvil"
+          >
+            <span className="block w-full h-0.5 bg-white transition-all duration-200 ease-in"></span>
+            <span className="block w-full h-0.5 bg-white transition-all duration-200 ease-in"></span>
+            <span className="block w-full h-0.5 bg-white transition-all duration-200 ease-in"></span>
           </button>
         </div>
       </nav>

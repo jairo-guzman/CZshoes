@@ -2,124 +2,10 @@
 /* 01. Base Styles             */
 /* ===================================== */
 
-:root {
-  /* Colors (Grayscale Palette) */
-  --color-dark-bg: #121212; /* Nearly black */
-  --color-dark-secondary-bg: #1e1e1e; /* Slightly lighter dark gray */
-  --color-text-light: #ffffff; /* Pure white for main text and titles */
-  --color-text-medium: #a0a0a0; /* Medium gray for secondary text */
-  --color-accent: #bbbbbb; /* Light gray/silver for accents and interactive elements */
-  --color-accent-dark: #888888; /* Darker gray for accent hover states */
-  --color-border: #333333; /* Dark gray for borders */
-  --color-white: #ffffff;
-  --color-black: #000000;
-
-  /* Specific colors for badges (can be adjusted to grayscale if preferred) */
-  --color-badge-new: #bbbbbb; /* Gray for "Nuevo" */
-  --color-badge-bestseller: #bbbbbb; /* Gray for "Bestseller" */
-  --color-badge-sale: #dc3545; /* Red for "Oferta" - kept for emphasis, can be changed to gray */
-  --color-badge-kids: #bbbbbb; /* Gray for "Niños" */
-  --color-badge-top-sales: #bbbbbb; /* Gray for "Top Ventas" */
-  --color-badge-novelty: #bbbbbb; /* Gray for "Novedad" */
-  --color-whatsapp: #25d366; /* WhatsApp green */
-  --color-whatsapp-dark: #1da851; /* Darker WhatsApp green */
-
-  /* Fonts */
-  --font-primary: "Inter", sans-serif;
-  --font-heading: "Rajdhani", sans-serif;
-
-  /* Spacing */
-  --spacing-xs: 0.5rem;
-  --spacing-sm: 1rem;
-  --spacing-md: 1.5rem;
-  --spacing-lg: 2rem;
-  --spacing-xl: 3rem;
-
-  /* Border Radius */
-  --border-radius-sm: 5px;
-  --border-radius-md: 10px;
-
-  /* Transitions */
-  --transition-speed: 0.3s;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: var(--font-primary);
-  line-height: 1.6;
-  color: var(--color-text-light);
-  background-color: var(--color-dark-bg);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* Accessibility: Ensure visible focus outline for keyboard navigation */
-a:focus-visible,
-button:focus-visible,
-input:focus-visible {
-  outline: 2px solid var(--color-accent);
-  outline-offset: 3px;
-  border-radius: var(--border-radius-sm);
-}
-
-a {
-  color: var(--color-accent);
-  text-decoration: none;
-  transition: color var(--transition-speed);
-}
-
-a:hover {
-  color: var(--color-accent-dark);
-}
-
-ul {
-  list-style: none;
-}
-
 img {
   max-width: 100%;
   height: auto;
   display: block;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-heading);
-  color: var(
-    --color-text-light
-  ); /* Changed to text-light for consistency in grayscale */
-  margin-bottom: var(--spacing-sm);
-  line-height: 1.2;
-}
-
-p {
-  margin-bottom: var(--spacing-sm);
-}
-
-/* Screen reader only class for accessibility */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
 }
 
 /* Container for max-width content */
@@ -407,7 +293,7 @@ p {
   height: 100%;
   background-size: cover;
   background-position: center;
-  opacity: 0;
+  opacity: 1;
   transition: opacity 1s ease-in-out;
   display: flex;
   align-items: center;
@@ -479,8 +365,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition:
-    background-color var(--transition-speed),
+  transition: background-color var(--transition-speed),
     transform var(--transition-speed);
   pointer-events: all; /* Re-enable clicks for buttons */
 }
@@ -507,8 +392,7 @@ p {
   border: none;
   border-radius: 50%;
   cursor: pointer;
-  transition:
-    background-color var(--transition-speed),
+  transition: background-color var(--transition-speed),
     transform var(--transition-speed);
 }
 
@@ -537,8 +421,7 @@ p {
   border-radius: var(--border-radius-md);
   text-align: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition:
-    transform var(--transition-speed),
+  transition: transform var(--transition-speed),
     box-shadow var(--transition-speed);
 }
 
@@ -584,8 +467,7 @@ p {
   border-radius: var(--border-radius-md);
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition:
-    transform var(--transition-speed),
+  transition: transform var(--transition-speed),
     box-shadow var(--transition-speed);
   position: relative;
 }
@@ -644,8 +526,7 @@ p {
   font-weight: 600;
   border-radius: var(--border-radius-sm);
   cursor: pointer;
-  transition:
-    background-color var(--transition-speed),
+  transition: background-color var(--transition-speed),
     transform var(--transition-speed);
   text-transform: uppercase;
 }
@@ -753,8 +634,7 @@ p {
   border-radius: var(--border-radius-md);
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition:
-    transform var(--transition-speed),
+  transition: transform var(--transition-speed),
     box-shadow var(--transition-speed);
 }
 
@@ -972,8 +852,7 @@ p {
   color: var(--color-text-light);
   border-radius: 50%;
   font-size: 1.1rem;
-  transition:
-    background-color var(--transition-speed),
+  transition: background-color var(--transition-speed),
     transform var(--transition-speed);
 }
 
@@ -1074,10 +953,8 @@ p {
   justify-content: center;
   cursor: pointer;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition:
-    background-color var(--transition-speed),
-    transform var(--transition-speed),
-    opacity var(--transition-speed);
+  transition: background-color var(--transition-speed),
+    transform var(--transition-speed), opacity var(--transition-speed);
   z-index: 999;
   opacity: 0; /* Hidden by default */
   pointer-events: none; /* Disable interaction when hidden */

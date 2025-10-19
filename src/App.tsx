@@ -1,4 +1,6 @@
 import "@/styles/App.css";
+import "@/styles/index.css";
+
 import { About } from "@/components/about";
 import { Categories } from "@/components/categories";
 import { Features } from "@/components/features";
